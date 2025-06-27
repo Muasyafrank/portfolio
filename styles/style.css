@@ -43,9 +43,10 @@
     margin-bottom: 15px;
     
 }
-.fixed-side-nav ul li i{
+.fixed-side-nav ul li a{
     color: white;
     font-size: 20px;
+    text-decoration: none;
     display: block;
     padding: 8px;
     transition: color 0.3s ease,background-color 0.3s ease;
