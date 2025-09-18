@@ -1,71 +1,55 @@
-document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+// lazy loading
 
-            // Progress Circles Logic
-            const skillItems = document.querySelectorAll('.skill-item');
-            skillItems.forEach(item => {
-                const circle = item.querySelector('.progress-circle');
-                const percent = parseInt(circle.dataset.percent);
-                const angle = (percent / 100) * 360; // Convert percentage to degrees
-                circle.style.setProperty('--angle', angle + 'deg'); // Set CSS variable
-            });
 
-            // Portfolio Filtering Logic
-            const filterButtons = document.querySelectorAll('.portfolio-filters button');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to the clicked button
-                    button.classList.add('active');
+// theme switcher
 
-                    const filterValue = button.dataset.filter;
+const themeToggle = document.getElementById("theme-toggle");
+const themeOptions = document.getElementById("theme-options");
+const body = document.body;
 
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                            item.style.display = 'block'; // Show item
-                        } else {
-                            item.style.display = 'none'; // Hide item
-                        }
-                    });
-                });
-            });
+// show/hide theme options
+themeToggle.addEventListener("click",()=>{
+    themeOptions.classList.toggle('hidden');
+})
+document.addEventListener('click',(e)=>{
+    if(!themeToggle.contains(e.target) && !themeOptions.contains(e.target)){
+        themeOptions.classList.add('hidden')
+    }
+});
 
-            // Fixed Side Navigation Active State on Scroll (Intersection Observer)
-            const sections = document.querySelectorAll('section[id]'); // Select sections with an ID
-            const navLinks = document.querySelectorAll('.fixed-side-nav a');
 
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.5 // When 50% of the section is visible
-            };
+// Theme selection
 
-            const sectionObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const currentSectionId = entry.target.id;
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href').includes(currentSectionId)) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, observerOptions);
+const themeOptionEl = document.querySelectorAll('.theme-option');
+themeOptionEl.forEach(option => {
+    option.addEventListener("click",()=>{
+        const theme = option.getAttribute('data-theme');
 
-            sections.forEach(section => {
-                sectionObserver.observe(section);
-            });
-        });
+        body.classList.remove('theme-dark','theme-colorful','theme-neobrutalist')
+
+        if(theme === 'dark'){
+            body.classList.add('theme-dark');
+        }else if(theme === 'colorful'){
+            body.classList.add('theme-colorful')
+        }else if(theme === 'neobrutalist'){
+            body.classList.add('theme-neobrutalist')
+        }
+        localStorage.setItem('portfolio-theme',theme);
+        themeOptions.classList.add('hidden');
+    })
+});
+
+const mobileMenuToggle = document.getElementById('moblie-menu-toggle');
+const mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenuToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('hidden');
+});
+
+const mobileLinks  = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+    link.addEventListener('click',()=>{
+        mobileMenu.classList.add('hidden');
+    })
+});

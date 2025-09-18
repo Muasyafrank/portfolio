@@ -3,217 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRANCIS MUASYA - WEB PORTFOLIO</title>
-</head>
-<link rel="stylesheet" href="styles/style.css">
-<link rel="shortcut icon" href="images/profile.jpeg" type="image/x-icon">
+    <title>Francis Muasya = Web Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+<link rel="stylesheet" href="/styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script>
+</head>
 <body>
-    <header class="hero-section">
-        <div class="container">
-            <div class="header-top">
-                <nav class="top-nav fixed-side-nav">
-                    <ul>
-            <li><a href="#about" title="About"><i class="ri-user-line"></i></a></li>
-            <li><a href="#skills" title="Skills"><i class="ri-macbook-line"></i></a></li>
-            <li><a href="#experience" title="Experience"><i class="ri-tools-line"></i></a></li>
-            <li><a href="#port" title="Portfolio"><i class="ri-briefcase-4-fill"></i></a></li>
-            <li><a href="#contact" title="Contact"><i class="ri-mail-line"></i></a></li>
    
-                    </ul>
-                </nav>
-            </div>
-            <div class="hero-content">
-                <div class="profile-image">
-                    <img src="images/profile.jpeg" alt="">
-                </div>
-                <div class="intro-text">
-                    <p> I`M FRANCIS MUASYA</p>
-                    <h1>WEB DEVELOPER</h1>
-                    <p class="tagline">I`m a Kenyan based web designer & frontend developer focused on crafting clean and user-friendly experiences . I am passionate about buliding excellent websites that improve the lives of those around me</p>
-                    <a class="btn btn-primary" href="#about">MORE ABOUT ME</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- about section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">ABOUT ME</h2>
-            <div class="about-content">
-                <div class="personal-info">
-                    <h3>PERSONAL INFORMATION</h3>
-                    <ul>
-                        <li><span class="label">First Name:</span>Francis</li>
-                        <li><span class="label">Last Name:</span>Muasya</li>
-                        <li><span class="label">Age:</span>19</li>
-                        <li><span class="label">Email:</span>scriptsamurai58@gmail.com</li>
-                        <li><span class="label">Phone Number:</span>0708143544</li>
-                        <li><span class="label">Addrees:</span>Nairobi,Kenya</li>
-                    </ul>
-                    <a href="#" class="btn btn-download"> <i class="ri-download-2-fill"></i>DOWNLOAD CV</a>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="number">14+</span>
-                        <span class="text">PROJECTS IN PROGRESS</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">3+</span>
-                        <span class="text">CERTIFICATES EARNED</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">5+</span>
-                        <span class="text">HACKATHONS WON</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">4+</span>
-                        <span class="text">YEARS OF EXPERIENCE</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- skills section -->
-     <section id="skills" class="skill-section">
-        <div class="container">
-            <h2 class="section-title">MY SKILLS</h2>
-            <div class="skill-grid">
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="25"><span>25%</span></div>
-                    <p>C</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="85"><span>85%</span></div>
-                    <p>HTML</p>             
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="75"><span>75%</span></div>
-                    <p>CSS</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="65"><span>65%</span></div>
-                    <p>JAVASCRIPT</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="25"><span>25%</span></div>
-                    <p>REACT</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="25"><span>25%</span></div>
-                    <p>MONGO DB</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="25"><span>25%</span></div>
-                    <p>PHP</p>
-                </div>
-                <div class="skill-item">
-                    <div class="progress-circle" data-percent="25"><span>25%</span></div>
-                    <p>PYTHON</p>
-                </div>
-            </div>
-        </div>
-     </section>
-     <!-- educaion and experience section -->
-      <section id="experience" class="exp-edu-section">
-        <div class="container">
-            <h3 class="section-title">EDUCATION AND EXPERIENCE</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">2023 - PRESENT </span>
-                    <h4>Bsc In Business Information Technology</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-date">2019 - 2022</span>
-                    <h4>HIGH SCHOOL</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-date">2023 - PRESENT</span>
-                    <h4>SOFTWARE DEVELOPMENT</h4>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- PORTFOLIO SECTION -->
-       <section class="portfolio-section" id="port">
-        <div class="container">
-            <h3 class="section-title">MY PORTFOLIO</h3>
-            <div class="portfolio-filters">
-                <ul>
-                    <li><button class="active" data-filter="all">All</button></li>
-                    <li><button data-filter="pending">PENDING</button></li>
-                    <li><button data-filter="finished">FINISHED</button></li>
-                    <li><button data-filter="notyetstarted">NOT YET STARTED</button></li>
-                </ul>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="images/image1.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/image2.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/image3.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/image4.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/image5.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="images/image6.jpeg" alt="">
-                    <div class="overlay"></div>
-                </div>
-            </div>
-        </div>
-       </section>
 
-       <section class="contact-section" id="contact">
-        <div class="container">
-            <h3 class="section-title">GET IN TOUCH</h3>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>DON`T BE SHY !</h3>
-                    <p>Feel free to get in touch with me.I am always open to discussing new projects,creative ideas or opportunities to be part of your visions</p>
-                    <div class="info-item">
-                        <i class="ri-map-pin-line"></i>
-                        <p>123 Street Nyeri Central,Nyeri</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="ri-phone-line"></i>
-                        <p>+254 708 143 544</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="ri-mail-send-line"></i>
-                        <p>scriptsamurai58@gmail.com<i/p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form action="">
-                        
-                            <input type="text" name="name" id="name" placeholder="YOUR NAME">
-                            <input type="email" name="email" id="" placeholder="YOUR EMAIL">
-                        
-                        <input type="text" name="subject" id="" placeholder="YOUR SUBJECT">
-                        <textarea name="message" id="" placeholder="YOUR MESSAGE" cols="30"></textarea>
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-                    </form>
-                </div>
+     <header class="fixed w-full bg-opacity-90 backdrop-blur-sm bg-white dark:bg-gray-700 z-50 transition-all duration-300" id="header">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <a href="#home" class="text-2xl font-bold" style="color: var(--primary-color);">Frank<span style="color: var(--secondary-color);">.</span></a>
+        
+        <div class="flex items-center space-x-6">
+          <nav class="hidden md:flex space-x-6">
+            <a href="#home" class="nav-link py-2 px-1 text-lg">Home</a>
+            <a href="#portfolio" class="nav-link py-2 px-1 text-lg">Portfolio</a>
+            <a href="#contact" class="nav-link py-2 px-1 text-lg">Contact</a>
+          </nav>
+          
+          <div class="theme-switcher relative">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition" style="color: var(--primary-color);">
+              <i class="ri-palette-line"></i>
+            </button>
+            <div class="theme-options hidden" id="theme-options">
+              <div class="theme-option" data-theme="minimalist">Minimalist</div>
+              <div class="theme-option" data-theme="colorful">Bold Colorful</div>
+              <div class="theme-option" data-theme="dark">Dark Mode</div>
+              <div class="theme-option" data-theme="neobrutalist">Neobrutalist</div>
             </div>
+          </div>
+          
+          <button class="md:hidden" id="mobile-menu-toggle" style="color: var(--primary-color);">
+       <i class="ri-menu-line text-2xl"></i>
+          </button>
         </div>
-       </section>
-    <script src="script/index.js"></script>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden py-4 mt-2 border-t" id="mobile-menu">
+        <nav class="flex flex-col space-y-3">
+          <a href="#home" class="py-2 px-1 text-lg">Home</a>
+          <a href="#portfolio" class="py-2 px-1 text-lg">Portfolio</a>
+          <a href="#contact" class="py-2 px-1 text-lg">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+     <section id="home" class="hero-section section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mt-10 md:mt-0">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeUp" style="color: var(--primary-color);">Hi, I'm <span style="color: var(--secondary-color);">Francis</span> Muasya</h1>
+          <p class="text-xl md:text-2xl mb-6 animate-fadeUp" style="animation-delay: 0.2s;">FrontEnd Developer & UI/UX Designer</p>
+          <p class="text-lg mb-8 animate-fadeUp" style="animation-delay: 0.4s;">I create beautiful, functional web applications that help businesses grow and succeed in the digital landscape.</p>
+          <div class="flex space-x-4 animate-fadeUp" style="animation-delay: 0.6s;">
+            <a href="#portfolio" class="btn-primary px-6 py-3 rounded-full font-semibold" style="background-color: var(--primary-color); color: white;">View My Work</a>
+            <a href="#contact" class="px-6 py-3 rounded-full font-semibold border-2" style="border-color: var(--primary-color); color: var(--text-color);">Contact Me</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="images/profile.jpeg" alt="Francis Muasya" class="profile-image w-64 h-64 md:w-80 md:h-80 object-cover animate-fadeUp">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-20 section">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">My <span style="color: var(--primary-color);">Projects</span></h2>
+      <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Here are some of my recent projects that showcase my skills and expertise in web development and design.</p>
+      
+      <!-- Filter Bar -->
+      <div class="flex flex-wrap justify-center mb-10 gap-2">
+        <button class="filter-btn px-4 py-2 rounded-full font-medium active" data-filter="all">All</button>
+        <button class="filter-btn px-4 py-2 rounded-full font-medium" data-filter="web">Web Apps</button>
+        <button class="filter-btn px-4 py-2 rounded-full font-medium" data-filter="design">UI/UX Design</button>
+        <button class="filter-btn px-4 py-2 rounded-full font-medium" data-filter="mobile">Mobile Apps</button>
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="web">
+            <img src="images/image6.jpeg" alt="" class="project-image lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+            <p class="mb-4">A fully responsive e-commerce platform with advanced filtering, cart functionality, and secure checkout.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card" data-category="design">
+            <img src="images/image5.jpeg" alt="" class="project-image lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Finance Dashboard</h3>
+            <p class="mb-4">A comprehensive finance dashboard with data visualization, transaction history, and budget planning tools.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">Adobe XD</span>
+              <span class="tech-tag">UI Design</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card" data-category="mobile">
+            <img src="images/image4.jpeg" alt="" class="project-image lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Fitness Tracker App</h3>
+            <p class="mb-4">A mobile application that helps users track their workouts, set goals, and monitor their fitness progress.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JAVASCRIPT</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card" data-category="web">
+            <img src="/images/image3.jpeg" alt="" class="project-image lazy"> 
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Task Management Platform</h3>
+            <p class="mb-4">A collaborative task management tool with real-time updates, team assignments, and progress tracking.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JAVASCRIPT</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card" data-category="design">
+          <img src="/images/image2.jpeg" alt="App Design" class="project-image lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Travel Booking App Design</h3>
+            <p class="mb-4">A sleek, user-friendly travel booking application design with intuitive navigation and visual appeal.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">Sketch</span>
+              <span class="tech-tag">Prototyping</span>
+              <span class="tech-tag">User Testing</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card" data-category="web">
+          <img src="/images/image1.jpeg" alt="Marketing Website" class="project-image lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Marketing Analytics Dashboard</h3>
+            <p class="mb-4">An analytics dashboard with advanced data visualization, campaign tracking, and performance metrics.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JAVASCRIPT</span>
+            </div>
+            <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded inline-block">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 section">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Get In <span style="color: var(--primary-color);">Touch</span></h2>
+      <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Have a project in mind or just want to say hello? Feel free to contact me and I'll get back to you as soon as possible.</p>
+      
+      <div class="max-w-2xl mx-auto">
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="name" class="block mb-2 font-medium">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required class="w-full">
+            </div>
+            <div>
+              <label for="email" class="block mb-2 font-medium">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required class="w-full">
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="subject" class="block mb-2 font-medium">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required class="w-full">
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block mb-2 font-medium">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required class="w-full"></textarea>
+          </div>
+          <div class="text-right">
+            <button type="submit" class="btn-primary px-8 py-3 rounded-full font-semibold">Send Message</button>
+          </div>
+        </form>
+        
+        <!-- Form Success Message (Hidden by default) -->
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="text-5xl mb-4" style="color: var(--secondary-color);">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
+          <p class="mb-6">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+          <button id="send-another" class="btn-primary px-6 py-2 rounded-full font-medium">Send Another Message</button>
+        </div>
+        
+        <!-- Form Loading (Hidden by default) -->
+        <div id="form-loading" class="hidden text-center py-10">
+          <div class="inline-block animate-spin text-4xl mb-4" style="color: var(--primary-color);">
+            <i class="fas fa-circle-notch"></i>
+          </div>
+          <p>Sending your message...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t" style="border-color: rgba(0,0,0,0.1);">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <a href="#home" class="text-2xl font-bold" style="color: var(--primary-color);">Francis Muasya<span style="color: var(--secondary-color);">.</span></a>
+        </div>
+        <div class="flex space-x-4">
+          <a href="javascript:void(0)" class="social-link p-2 rounded-full" aria-label="GitHub">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="javascript:void(0)" class="social-link p-2 rounded-full" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="javascript:void(0)" class="social-link p-2 rounded-full" aria-label="Twitter">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="javascript:void(0)" class="social-link p-2 rounded-full" aria-label="Dribbble">
+            <i class="fab fa-dribbble text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <p>&copy; 2025 Francis Muasya. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script/index.js"></script>
 </body>
 </html>
