@@ -71,7 +71,7 @@ export default async function handler(req,res) {
 
     res.status(200).json({ success: true, message: "Message sent & saved ✅" });
 
-  } catch (error) {
+  } catch (err) {
 
     console.error("Error",err);
         res.status(500).json({ success: false, message: "Something went wrong ❌" });
