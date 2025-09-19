@@ -144,11 +144,7 @@ filterButtons.forEach(button => {
 });
 
 
-    sendAnother.addEventListener('click',()=>{
-        contactForm.reset();
-        formSuccess.classList.add('hidden');
-        contactForm.classList.remove('hidden');
-    })
+    
 
     const sections = document.querySelectorAll('.section');
 
