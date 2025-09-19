@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     // Confirmation email to sender
     const brandColor = "#3498db";
     await transporter.sendMail({
-      from: `"Your Website" <${process.env.GMAIL_USER}>`,
+      from: `"Francis Muasya" <${process.env.GMAIL_USER}>`,
       to: email,
       subject: "✅ We received your message",
       html: `
@@ -43,13 +43,11 @@ export default async function handler(req, res) {
           <div style="padding: 20px; color: #333;">
             <p>Hi <strong>${name}</strong>,</p>
             <p>We’ve received your message and our team will get back to you soon.</p>
-            <blockquote style="border-left: 4px solid ${brandColor}; padding-left: 10px; color: #555;">
-              ${message}
-            </blockquote>
-            <p>Best regards,<br><strong>Your Company Team</strong></p>
+            
+            <p>Best regards,<br><strong>Francis Muasya</strong></p>
           </div>
           <div style="background-color: #f3f4f6; padding: 10px; text-align: center; font-size: 12px; color: #666;">
-            <p>&copy; ${new Date().getFullYear()} Your Company</p>
+            <p>&copy; ${new Date().getFullYear()} Francis Muasya</p>
           </div>
         </div>
       `,
