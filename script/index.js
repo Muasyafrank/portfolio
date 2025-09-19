@@ -115,7 +115,7 @@ filterButtons.forEach(button => {
         };
 
         try {
-          const res = await fetch("/api/send-message",{
+          const res = await fetch("/api/send-message.js",{
             method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
