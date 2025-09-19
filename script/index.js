@@ -120,6 +120,9 @@ filterButtons.forEach(button => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
           });
+          if (res.ok) {
+      contactForm.reset();
+    }
         } catch (error) {
             const data = await res.json();
         }
