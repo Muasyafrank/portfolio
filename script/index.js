@@ -101,43 +101,43 @@ filterButtons.forEach(button => {
     const sendAnother = document.getElementById('send-another');
 
 
-    contactForm.addEventListener('submit',async function(e){
-        e.preventDefault();
-        contactForm.classList.add('hidden');
-        formLoading.classList.remove('hidden');
+   contactForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  contactForm.classList.add('hidden');
+  formLoading.classList.remove('hidden');
 
-        const formData = {
-            name:document.getElementById('name').value,
-            email:document.getElementById('email').value,
-            subject:document.getElementById('subject').value,
-            message:document.getElementById('message').value
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+  };
 
-        };
+  try {
+    const res = await fetch("/api/send-message", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-        try {
-          const res = await fetch("/api/send-message.js",{
-            method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-          });
-        } catch (error) {
-            const data = await res.json();
-        }
+    const data = await res.json();
 
+    if (data.success) {
+      setTimeout(() => {
+        formLoading.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      }, 2000);
+    } else {
+      throw new Error(data.message || "Server error");
+    }
+  } catch (error) {
+    console.error("Form submission failed:", error);
 
-        // const submissions = JSON.parse(localStorage.getItem('contact-submissions') || '[]');
+    formLoading.classList.add('hidden');
+    formError.classList.remove('hidden'); // ⚡ Add an error element in your HTML
+  }
+});
 
-        // submissions.push({
-        //     ...formData,
-        //     date:new Date().toISOString()
-        // });
-        // localStorage.setItem('contact-submission',JSON.stringify(submissions));
-
-        setTimeout(() => {
-            formLoading.classList.add('hidden');
-            formSuccess.classList.remove('hidden')
-        }, 2000);
-    })
 
     sendAnother.addEventListener('click',()=>{
         contactForm.reset();
