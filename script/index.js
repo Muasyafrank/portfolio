@@ -127,6 +127,11 @@ filterButtons.forEach(button => {
         formLoading.classList.add('hidden');
         formSuccess.classList.remove('hidden');
       }, 2000);
+       sendAnother.addEventListener('click',()=>{
+        contactForm.reset();
+        formSuccess.classList.add('hidden');
+        contactForm.classList.remove('hidden');
+    })
     } else {
       throw new Error(data.message || "Server error");
     }
