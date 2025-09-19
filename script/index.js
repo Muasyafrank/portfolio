@@ -101,7 +101,7 @@ filterButtons.forEach(button => {
     const sendAnother = document.getElementById('send-another');
 
 
-    contactForm.addEventListener('submit',(e)=>{
+    contactForm.addEventListener('submit',async function(e){
         e.preventDefault();
         contactForm.classList.add('hidden');
         formLoading.classList.remove('hidden');
@@ -114,13 +114,24 @@ filterButtons.forEach(button => {
 
         };
 
-        const submissions = JSON.parse(localStorage.getItem('contact-submissions') || '[]');
+        try {
+          const res = await fetch("/api/send-message",{
+            method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+          });
+        } catch (error) {
+            const data = await res.json();
+        }
 
-        submissions.push({
-            ...formData,
-            date:new Date().toISOString()
-        });
-        localStorage.setItem('contact-submission',JSON.stringify(submissions));
+
+        // const submissions = JSON.parse(localStorage.getItem('contact-submissions') || '[]');
+
+        // submissions.push({
+        //     ...formData,
+        //     date:new Date().toISOString()
+        // });
+        // localStorage.setItem('contact-submission',JSON.stringify(submissions));
 
         setTimeout(() => {
             formLoading.classList.add('hidden');
