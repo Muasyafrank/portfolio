@@ -134,7 +134,7 @@ filterButtons.forEach(button => {
     console.error("Form submission failed:", error);
 
     formLoading.classList.add('hidden');
-    formError.classList.remove('hidden'); // ⚡ Add an error element in your HTML
+    // formError.classList.remove('hidden'); // ⚡ Add an error element in your HTML
   }
 });
 
