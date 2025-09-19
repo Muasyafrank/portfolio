@@ -20,6 +20,20 @@ document.addEventListener('click',(e)=>{
     }
 });
 
+const toggleButton = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+       if (mobileMenu.classList.contains("hidden")) {
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-line");
+      } else {
+        menuIcon.classList.remove("ri-menu-line");
+        menuIcon.classList.add("ri-close-line");
+      }
+    });
+
 
 // Theme selection
 
