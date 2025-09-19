@@ -101,50 +101,49 @@ filterButtons.forEach(button => {
     const sendAnother = document.getElementById('send-another');
 
 
-   contactForm.addEventListener('submit', async function (e) {
-  e.preventDefault();
-  contactForm.classList.add('hidden');
-  formLoading.classList.remove('hidden');
+    contactForm.addEventListener('submit',async function(e){
+        e.preventDefault();
+        contactForm.classList.add('hidden');
+        formLoading.classList.remove('hidden');
 
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    subject: document.getElementById('subject').value,
-    message: document.getElementById('message').value,
-  };
+        const formData = {
+            name:document.getElementById('name').value,
+            email:document.getElementById('email').value,
+            subject:document.getElementById('subject').value,
+            message:document.getElementById('message').value
 
-  try {
-    const res = await fetch("/api/send-message", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+        };
 
-    const data = await res.json();
+        try {
+          const res = await fetch("/api/send-message",{
+            method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+          });
+        } catch (error) {
+            const data = await res.json();
+        }
 
-    if (data.success) {
-      setTimeout(() => {
-        formLoading.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
-      }, 2000);
-       sendAnother.addEventListener('click',()=>{
+
+        // const submissions = JSON.parse(localStorage.getItem('contact-submissions') || '[]');
+
+        // submissions.push({
+        //     ...formData,
+        //     date:new Date().toISOString()
+        // });
+        // localStorage.setItem('contact-submission',JSON.stringify(submissions));
+
+        setTimeout(() => {
+            formLoading.classList.add('hidden');
+            formSuccess.classList.remove('hidden')
+        }, 2000);
+    })
+
+    sendAnother.addEventListener('click',()=>{
         contactForm.reset();
         formSuccess.classList.add('hidden');
         contactForm.classList.remove('hidden');
     })
-    } else {
-      throw new Error(data.message || "Server error");
-    }
-  } catch (error) {
-    console.error("Form submission failed:", error);
-
-    formLoading.classList.add('hidden');
-    // formError.classList.remove('hidden'); // ⚡ Add an error element in your HTML
-  }
-});
-
-
-    
 
     const sections = document.querySelectorAll('.section');
 
