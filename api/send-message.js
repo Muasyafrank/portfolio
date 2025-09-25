@@ -53,7 +53,7 @@ export default async function handler(req, res) {
       `,
     });
 
-    // Save to Google Sheets
+    
     const auth = new google.auth.JWT(
       process.env.GOOGLE_CLIENT_EMAIL,
       null,
@@ -71,9 +71,9 @@ export default async function handler(req, res) {
       },
     });
 
-    res.status(200).json({ success: true, message: "Message sent & saved ✅" });
+    res.status(200).json({ success: true, message: "Message sent & saved " });
   } catch (err) {
     console.error("Error:", err);
-    res.status(500).json({ success: false, message: "Something went wrong ❌", error: err.message });
+    res.status(500).json({ success: false, message: "Something went wrong ", error: err.message });
   }
 }
